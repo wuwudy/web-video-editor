@@ -5,7 +5,7 @@ import { nextTick } from 'vue';
 const myWorker = new Worker("worker.js", { name: "myWorker" });
 
 nextTick(() => {
-  console.log(myWorker.name)
+  console.log(myWorker)
 })
 
 </script>
