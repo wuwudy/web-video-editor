@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import FFmpegDemo from './components/FFmpegDemo.vue'
-import test from './components/test.vue'
+// import test from './components/test.vue'
 import WebcodecsDemo from './components/WebcodecsDemo.vue'
 </script>
 
 <template>
-  <!-- <FFmpegDemo></FFmpegDemo> -->
+  <FFmpegDemo></FFmpegDemo>
   <!-- <test></test> -->
    <WebcodecsDemo></WebcodecsDemo>
 </template>
