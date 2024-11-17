@@ -23,6 +23,9 @@ export default defineComponent({
     })
 
     async function transcode() {
+      try{
+
+      
       message.value = 'Loading ffmpeg-core.js'
       ffmpeg.on('log', ({ message: msg }: LogEvent) => {
         message.value = msg
@@ -32,6 +35,9 @@ export default defineComponent({
         wasmURL: await toBlobURL(`${baseURL}/ffmpeg-core.wasm`, 'application/wasm'),
         workerURL: await toBlobURL(`${baseURL}/ffmpeg-core.worker.js`, 'text/javascript')
       })
+    }  catch (e) {
+      console.log(e)
+    }
       message.value = 'Start transcoding'
       // await ffmpeg.writeFile('test.avi', await fetchFile(videoURL))
 
