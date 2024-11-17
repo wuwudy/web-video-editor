@@ -13,9 +13,22 @@ function handleChange(event: Event) {
   }
 }
 
+function handleClick() {
+  //发fetch请求
+  fetch('https://api.apiopen.top/searchMusic?name=好久不见', {
+    method: 'POST'
+  })
+  .then(response => response.json())
+  .then(data => {
+    document.querySelector('div')!.innerHTML = JSON.stringify(data)
+  })
+}
+
 </script>
 
 <template>
+  <button @click="handleClick">测试</button>
+  <div></div>
   <input type="file" class="input-file" @change="handleChange">
 </template>
 
