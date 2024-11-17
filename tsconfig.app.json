@@ -8,7 +8,7 @@
     "skipLibCheck": true,
 
     /* Bundler mode */
-    "moduleResolution": "Bundler",
+    "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "moduleDetection": "force",
@@ -16,11 +16,17 @@
     "jsx": "preserve",
 
     /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
+    "strict": true, 
+    "noUnusedLocals": false, //关闭了检查：‘声明了但没有使用的变量’
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+
+    /*自定义路径导入*/
+    "baseUrl": ".",
+    "paths": {
+      "@ffmpeg/ffmpeg/dist/esm/types": ["node_modules/@ffmpeg/ffmpeg/dist/esm/types.d.ts"]
+    }
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"]
 }
